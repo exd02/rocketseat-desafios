@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap');
+
+:root {
+  font-family: 'Merriweather Sans', sans-serif;
+  color: var(--text-color);
+
+  --body-bg-color: #22212C;
+  --text-color: #837E9F;
+  --bg-cards: #302F3D;
+  --bg-techs: #CB92B1;
+  --radius-card: 16px;
+}
+
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--body-bg-color);
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.personal-info-container {
+  width: 25vw;
+  max-width: 348px;
+  height: 100px;
+}
+
+.projects-container {
+  width: 65vw;
+  max-width: 952px;
+  height: 100px;
+}
+
+.card {
+  margin: 1.5rem 0;
+  background-color: var(--bg-cards);
+  border-radius: var(--radius-card);
+  padding: 1.5rem 2rem 2rem 2rem;
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.25);
+}
+
+.c-person { text-align: center; }
+
+.c-person h2 { padding: 1rem 0 0.4rem 0; }
+
+ul {
+  list-style-type: none;
+}
+
+.list-info li {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  word-break: break-word;
+}
+
+.list-info li:not(:first-child) {
+  padding-top: 1rem;
+}
+
+p, span {
+  font-size: 0.9em;
+}
+
+.description {
+  font-size: 0.8em;
+}
+
+.user-img {
+  border-radius: 100%;
+  width: 50%;
+  min-width: 70px;
+  height: 50%;
+  min-height: 70px;
+  object-fit: cover;
+  border: 2px solid lightgreen;
+}
+
+.list-skills {
+  display: grid;
+
+  /* responsive */
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.card-recued-title {
+  padding-bottom: 2rem;
+  margin-left: -0.6rem;
+}
+
+.list-skills li {
+  background-color: var(--bg-techs);
+  border-radius: var(--radius-card);
+  padding: 0.5em 0.35em;
+
+  /* text */
+  text-align: center;
+  color: black;
+  font-size: 0.75em;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.list-dot {
+  margin-left: 1.5rem;
+}
+
+.list-dot h4 {
+  position: relative;
+}
+
+.list-dot h4::before {
+  content: "•";
+  font-size: 2em;
+  position: absolute;
+  left: -0.6em;
+  top: -0.25em;
+}
+
+.list-dot li:not(:first-child) {
+  padding-top: 1rem;
+}
+
+.date-info, .info {
+  display: block;
+}
