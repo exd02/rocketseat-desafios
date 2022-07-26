@@ -18,6 +18,9 @@
 
 body {
   background-color: var(--body-bg-color);
+}
+
+main {
   display: flex;
   justify-content: center;
   gap: 3rem;
@@ -26,13 +29,11 @@ body {
 .personal-info-container {
   width: 25vw;
   max-width: 348px;
-  height: 100px;
 }
 
 .projects-container {
   width: 65vw;
   max-width: 952px;
-  height: 100px;
 }
 
 .card {
