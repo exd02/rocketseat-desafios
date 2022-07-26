@@ -4,6 +4,7 @@
   font-family: 'Merriweather Sans', sans-serif;
   color: var(--text-color);
   font-size: 14px;
+  font-weight: 400;
 
   --body-bg-color: #22212C;
   --text-color: #837E9F;
@@ -18,23 +19,27 @@
   padding: 0;
 }
 
-@media screen and (max-width: 800px) {
-  :root { font-size: 12px; }
-  .list-skills {
+/* RESPONSIVE */
+
+
+@media screen and (max-width: 880px) {
+  body { font-size: 12px; }
+
+  main {
     grid-template-columns: 1fr;
+    max-width: 700px;
   }
+
+  .list-skills { grid-template-columns: 1fr 1fr 1fr 1fr; }
 }
-@media screen and (min-width: 801px) and (max-width: 1000px) {
-  :root { font-size: 14px; }
-  .list-skills {
-    grid-template-columns: 1fr 1fr;
+
+@media screen and (min-width: 881px) {
+  main {
+    grid-template-columns: 0.3fr 1fr;
+    max-width: 1300px;
   }
-}
-@media screen and (min-width: 1001px) {
-  :root { font-size: 16px; }
-  .list-skills {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+  
+  .list-skills { grid-template-columns: 1fr 1fr 1fr; }
 }
 
 body {
@@ -42,19 +47,11 @@ body {
 }
 
 main {
-  display: flex;
+  display: grid;
   justify-content: center;
   gap: 3rem;
-}
-
-.personal-info-container {
-  width: 25vw;
-  max-width: 348px;
-}
-
-.projects-container {
-  width: 65vw;
-  max-width: 952px;
+  padding: 0 2.5vw;
+  margin: 0 auto;
 }
 
 .card {
@@ -69,11 +66,11 @@ main {
 
 .c-person h2 { padding: 1rem 0 0.4rem 0; }
 
-ul {
+.list-skills, .list-info {
   list-style-type: none;
 }
 
-.list-info li {
+.list-info li a{
   display: flex;
   gap: 1rem;
   align-items: center;
@@ -122,29 +119,11 @@ ul {
   text-transform: uppercase;
 }
 
-.list-dot {
-  margin-left: 1.5rem;
-}
+.list-dot { padding-left: 2rem; }
 
-.list-dot h4 {
-  position: relative;
-}
+.list-dot li:not(:first-child) { padding-top: 1rem; }
 
-.list-dot h4::before {
-  content: "•";
-  font-size: 2em;
-  position: absolute;
-  left: -0.6em;
-  top: -0.25em;
-}
-
-.list-dot li:not(:first-child) {
-  padding-top: 1rem;
-}
-
-.date-info, .info {
-  display: block;
-}
+.date-info, .info { display: block; }
 
 .my-projects {
   display: flex;
@@ -168,7 +147,7 @@ a:hover { color: var(--bg-techs); }
   gap: 1.5rem;
 }
 
-.project-header {
+.project-header a{
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -227,8 +206,6 @@ h4 {
   font-size: 0.8em;
   padding-right: 12px;
 }
-
-.tags span::before { content: '#'; }
 
 footer {
   padding: 2rem 0 1rem 0;
