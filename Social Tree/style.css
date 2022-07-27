@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap');
+
+*, ::before, ::after {
+  margin: 0;
+}
+
+:root {
+  font-family: 'Merriweather Sans', sans-serif;
+  --body-bg-color: #FAF7FD;
+  --purple: #BB99DD;
+  --purple-strongbg: rgba(186, 152, 219, 0.4);
+  --purple-strong: #6f2eb1;
+  --radius: 4px;
+  --transition: 250ms;
+}
+
+body {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+main {
+  width: 90vw;
+  max-width: 375px;
+  text-align: center;
+}
+
+.avatar {
+  width: 85%;
+  max-width: 225px;
+
+  height: 85%;
+  max-height: 225px;
+
+  border-radius: 50%;
+  object-fit: cover;
+
+  border: 5px solid transparent; 
+  outline: 2px solid var(--purple);
+}
+
+.instagram {
+  margin: 1.5rem 0;
+  display: block;
+}
+
+a { text-decoration: none; }
+
+a:visited, a:link, a:active { color: var(--purple); }
+
+a:hover { color: var(--purple-strong); }
+
+button {
+  cursor: pointer;
+  width: 90%;
+
+  margin: .5rem 5%;
+  padding: 1rem 0;
+
+  font-size: 1.1em;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--purple);
+
+  background-color: transparent;
+  border: 1px solid var(--purple);
+  border-radius: var(--radius);
+
+  transition: color var(--transition), border-color var(--transition);
+}
+
+button:hover {
+  color: var(--purple-strong);
+  border-color: var(--purple-strong);
+}
+
+.info-footer {
+  margin: 3rem 12% 0 12%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.info-footer img {
+  padding: 5px;
+  border-radius: 25%;
+  transition: background-color var(--transition);
+}
+
+.info-footer img:hover { background-color: var(--purple-strongbg); }
