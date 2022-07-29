@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100&display=swap');
+
+*, ::after, ::before {
+  margin: 0;
+}
+
+:root {
+  font-family: 'League Spartan', sans-serif;
+  color: var(--text-color);
+
+  --transition: 300ms;
+  --body-bg-color: #121214;
+  --text-color: #E1E1E6;
+  --title-color: #04D361;
+  --form-color: #A8A8A8;
+  --bg-button-color: #8257e5;
+}
+
+.bg-solid {
+  width: 45%;
+}
+.bg-img {
+  width: 55%;
+}
+
+@media screen and (max-width: 1000px) {
+  .bg-solid {
+    width: 100%;
+  }
+  .bg-img {
+    width: 0%;
+  }
+}
+@media screen and (min-width: 1001px) and (max-width: 1501px) {
+  .bg-solid {
+    width: 75%;
+  }
+  .bg-img {
+    width: 25%;
+  }
+}
+
+.bg {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+
+  z-index: -999;
+}
+
+.bg-solid {
+  top:0;
+  left: 0;
+
+  height: 100%;
+  background: var(--body-bg-color);
+
+  word-break: break-word;
+
+  transition: width var(--transition);
+  z-index: -999;
+}
+
+.bg-img {
+  top:0;
+  right: 0;
+
+  height: 100%;
+
+  position: absolute;
+
+  background: url('./assets/read_news.jpg') no-repeat right;
+  background-size: cover;
+
+  transition: width var(--transition);
+  z-index: -999;
+}
+
+.container {
+  padding: 8vh 3rem 0 3rem;
+  z-index: 999;
+}
+
+.logo {
+  width: 90%;
+  max-width: 450px;
+  margin-bottom: 6rem;
+}
+
+h2 { color: var(--title-color); }
+
+h2, h3 { margin-bottom: 1rem; }
+
+p {
+  margin-bottom: 4rem;
+  font-size: 1.1rem;
+}
+
+label {
+  font-size: 1.25em;
+  font-weight: 600;
+  color: var(--form-color);
+}
+
+input {
+  border: none;
+  border-left: 5px solid var(--title-color);
+  padding-left: 1rem;
+  width: 100%;
+  display: inline;
+}
+
+.input-with-symbol {
+  margin-top: 1rem;
+  display: flex;
+  max-width: 1000px;
+  width: 85vw;
+
+  box-shadow: 0 0 16px var(--body-bg-color);
+}
+
+.symbol {
+  background-color: var(--bg-button-color);
+  padding: 1rem;
+  cursor: pointer;
+}
+
+a { text-decoration: none; }
+
+a:visited, a:link, a:active { color: var(--bg-button-color); }
+
+a:hover { color: var(--bg-button-color); }
+
+.read-first {
+  font-size: 1.15em;
+  font-weight: 600;
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  letter-spacing: .08em;
+}
+
+.read-first img {
+  margin-left: .5rem;
+}
+
+input:focus{ outline: none; }
