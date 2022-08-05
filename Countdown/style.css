@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+:root {
+  --black: #4D4C59;
+  --purple: #6C63FF;
+  --transparent-purple: #6b63ff00;
+	--light-grey: #C8C8C8;
+  --text-color: #9C9AB6;
+  --white-smoke: #ebebeb;
+
+  --transition: 250ms;
+}
+
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--black);
+}
+
+
+@media screen and (min-width: 801px) {
+  body {
+    font-size: 16px;
+  }
+  .background {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 801px) and (max-width: 850px) {
+  body {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 800px) {
+  body {
+    font-size: 14px;
+  }
+  .background {
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+.background {
+  background-image: url('./images/top-image.svg'), url('./images/bottom-image.svg');
+  background-position: top, bottom;
+  background-repeat: no-repeat, no-repeat;
+  background-size:contain;
+  height: 100vh;
+  width: 100vw;
+
+  display: grid;
+  
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.launch-image img {
+  width: 100%;
+}
+
+h1 { font-size: 3.5em; }
+h2 { font-size: 2em; }
+
+.title {
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--purple);
+  padding-bottom: 3rem;
+}
+
+.timer {
+  font-weight: 600;
+}
+
+.timer span {
+  position:relative;
+  box-sizing: border-box;
+}
+
+.days::before { content: "days"; }
+.hours::before { content: "hours"; }
+.minutes::before { content: "minutes"; }
+.seconds::before { content: "seconds"; }
+
+.timer span::before {
+  color: var(--light-grey);
+  font-weight: 300;
+  position: absolute;
+  font-size: 0.8rem;
+  top: -2rem;
+  width: 100%;
+}
+
+.description {
+  padding-bottom: 1.5rem;
+  font-weight: 300;
+}
+
+.subscribe-button {
+  color: var(--white-smoke);
+  background-color: var(--purple);
+  border: none;
+  padding: 1em 2em;
+  border-radius: 10px;
+  cursor:pointer;
+
+  transition: color var(--transition);
+}
+
+.subscribe-button:hover {
+  color: white;
+}
